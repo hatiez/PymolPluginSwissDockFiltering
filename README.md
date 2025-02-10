@@ -3,12 +3,12 @@
 This small PyMol plugin was made to filter the output from SwissDock docking simulations for a project I did as an intern at Prof. Dr. Elke Bogner's lab at Charité Berlin. The goal is to remove any conformations where the ligand is not within a certain distance of a user-set residues. 
 The plugin was built to work with outputs from SwissDock in 2023.
 
-# Overview
+## Overview
 This PyMOL plugin is designed to process, filter, and analyze SwissDock docking results. It automates the extraction of ligand binding poses, filters them based on their distance to specific binding residues, and extracts binding free energy values (∆G). The plugin also calculates statistical summaries and can process multiple docking output folders at once.
 
 The plugin is useful for binding site analysis, ligand pose filtering, and quantifying docking interactions. It was developed for analyzing Letermovir docking results with the UL56 protein but can be applied to other docking studies as well.
 
-# Features
+## Features
 - Organizes SwissDock results by splitting docking output files into separate entries.
 - Filters ligand poses based on their distance to selected binding site residues.
 - Extracts ∆G values (binding free energy) and dissociation constant (Kd).
@@ -16,7 +16,7 @@ The plugin is useful for binding site analysis, ligand pose filtering, and quant
 - Processes multiple docking outputs in batch mode.
 - Generates residue interaction data, counting how often each residue is within 5Å of a ligand.
 
-# Installation
+## Installation
 Step 1: Install the Plugin in PyMOL
 Open PyMOL.
 Go to Plugins > Plugin Manager.
@@ -26,7 +26,7 @@ Step 2: Install Pandas
 The plugin requires Pandas (a Python library). Install it by typing this in the PyMOL terminal:
 pip install pandas
 
-# How to Use the Plugin
+## How to Use the Plugin
 1. Open the Plugin
 In PyMOL, go to Plugins > Process SwissDock Plugin.
 2. Select Input and Output Folders
@@ -42,13 +42,13 @@ If you want to process multiple SwissDock outputs at once, select Master Directo
 Click "Run" to start processing.
 The processed output will be saved in the output folder inside the SwissDock results directory.
 
-# Output Files
+## Output Files
 - Filtered PDB files: Ligand poses that passed the filtering step.
 - allValues.csv: A file containing extracted ∆G values for all filtered ligand poses.
 - stats.txt: If statistics are enabled, this file contains the mean ∆G, standard deviation, and Kd values.
 - binding_residues.csv: If binding residues are specified, this file lists residues and how often they appear within 5 Å of the ligand.
 
-# Functions Included in the Plugin
+## Functions Included in the Plugin
 Splitting Docking Clusters
 The plugin can split SwissDock PDB files into separate entries. This helps in processing individual docking poses separately.
 
@@ -61,7 +61,7 @@ The plugin removes ligand conformations that are not close to the specified bind
 Processing Multiple Docking Results
 The plugin allows processing multiple SwissDock output folders in one go if a master directory containing multiple outputs is selected.
 
-# Example Usage
+## Example Usage
 
 Single Docking Analysis
 - Open PyMOL.
